@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Luna Ropa Urbana</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="Imagenes/Luna Ropa Urbana Minimalista.png" alt="Logo Luna Ropa Urbana" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="#productos-iniciales">Colección</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-texto">
+      <img class="hero-img-logo" src="Imagenes/Luna Ropa Urbana Minimalista.png"
+      <h1>Estilo Urbano, Actitud Propia</h1>
+      <p>Descubrí la nueva colección 2025</p>
+      <a href="#coleccion" class="boton">Ver Colección</a>
+    </div>
+    <img src="Imagenes/principal.jpeg" alt="Imagen principal" class="hero-img" />
+  </section>
+
+ <!-- Colección -->
+<section id="productos-iniciales" class="coleccion">
+  <div class="container">
+    <h2>Nuestra Colección</h2>
+    <div class="productos">
+      <div class="producto">
+        <img  src="Imagenes/remeraOverzide.jpeg" alt="Remera Oversize" />
+        <h3>Remera Oversize</h3>
+        <p class="precio">$ 25 Usd</p>
+          <button class="btn-ver-mas" onclick="mostrarDetalle('detalleProducto', event, {
+    titulo: 'Remera Overzide',
+    imagen: 'Imagenes/remeraOverzide.jpeg',
+    descripcion: 'Camisa de lino fresca, ideal para primavera y verano.',
+    talles: ['S', 'M', 'L'],
+    colores: ['Blanco', 'Celeste'],
+    material: 'Lino 100%',
+    precio: '$1.890',
+    relacionados: [
+      { titulo: 'Sudadera Overzide', imagen: 'Imagenes/sudaderaOverzide2.jpeg' },
+      { titulo: 'Cargo Overzide', imagen: 'Imagenes/cargoOverzide.jpeg' }
+    ]
+  })">Ver más</button>
+      </div>
+      <div class="producto">
+        <img src="Imagenes/buzoCrop.jpeg" alt="Buzo Crop" />
+        <h3>Buzo Crop</h3>
+        <p class="precio">$ 35 Usd</p>
+       <button class="btn-ver-mas" onclick="mostrarDetalle('detalleProducto', event, {
+    titulo: 'Buzo Crop',
+    imagen: 'Imagenes/buzoCrop.jpeg',
+    descripcion: 'Camisa de lino fresca, ideal para primavera y verano.',
+    talles: ['S', 'M', 'L'],
+    colores: ['Blanco', 'Celeste'],
+    material: 'Lino 100%',
+    precio: '$1.890',
+    relacionados: [
+      { titulo: 'Pantalon Overzide', imagen: 'Imagenes/pantalonOverzide.jpeg' },
+      { titulo: 'Sudadera Overzide', imagen: 'Imagenes/sudaderaOverzide.jpeg' }
+    ]
+  })">Ver más</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PANEL DETALLE OCULTO -->
+<div id="detalleProducto" class="panel-detalle oculto">
+  <div class="contenido-panel">
+    <button class="cerrar" onclick="cerrarDetalle('detalleProducto')">✕</button>
+
+    <div class="detalle-producto">
+      <div class="imagen">
+        <img id="detalleImagen" src="" alt="Imagen del producto">
+      </div>
+      <div class="info">
+        <h2 id="detalleTitulo">Nombre del producto</h2>
+        <p id="detalleDescripcion">Descripción general del producto.</p>
+
+        <ul class="ficha-tecnica">
+          <li><strong>Talles:</strong> <span id="detalleTalles">-</span></li>
+          <li><strong>Colores:</strong> <span id="detalleColores">-</span></li>
+          <li><strong>Material:</strong> <span id="detalleMaterial">-</span></li>
+          <li><strong>Precio:</strong> <span id="detallePrecio">-</span></li>
+        </ul>
+
+        <button class="whatsapp-btn" id="btnWhatsapp">Comprar por WhatsApp</button>
+      </div>
+    </div>
+
+    <h3 class="mt-4">Más de esta colección</h3>
+    <div id="detalleRelacionados" class="productos-relacionados">
+      <!-- Se insertan dinámicamente -->
+    </div>
+  </div>
+</div>
+
+
+
+
+  <!--Sobre nosotros-->
+<section class="about-us" id="nosotros">
+  <div class="container">
+    <h2 class="title">Sobre Nosotros</h2>
+    <p class="subtitle">No seguimos modas. Creamos estilo con identidad.</p>
+    <p class="description">
+      En <strong>Luna Ropa Urbana</strong> diseñamos ropa oversize y urbana pensada para que te vistas como sos. 
+      Cada prenda combina comodidad, actitud y estilo real. Nuestro propósito es que te sientas libre, auténtica y con confianza cada vez que te mirás al espejo.
+    </p>
+
+    <ul class="values">
+      <li>✔ Comodidad con estilo</li>
+      <li>✔ Inspiración urbana</li>
+      <li>✔ Moda sin etiquetas</li>
+      <li>✔ Diseñado en Uruguay</li>
+    </ul>
+
+    <p class="cta">Sumate a la comunidad Luna y viví tu estilo con actitud.</p>
+  </div>
+</section>
+
+<!--Section contacto-->
+<section id="contacto" class="contacto">
+  <div class="container">
+    <h2>Contacto</h2>
+    <p>¿Querés hacer un pedido o tenés dudas?</p>
+    <a href="https://wa.me/59897431589" target="_blank" class="whatsapp-btn">
+      <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp" />
+      Escribinos por WhatsApp
+    </a>
+  </div>
+</section>
+
+<!--Footer-->
+  <footer>
+    <p>&copy; 2025 Luna Ropa Urbana. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+
+
+function mostrarDetalle(id, event, datosProducto) {
+  event.preventDefault();
+
+  // Rellenar información
+  document.getElementById('detalleTitulo').textContent = datosProducto.titulo;
+  document.getElementById('detalleImagen').src = datosProducto.imagen;
+  document.getElementById('detalleImagen').alt = datosProducto.titulo;
+  document.getElementById('detalleDescripcion').textContent = datosProducto.descripcion;
+
+  document.getElementById('detalleTalles').textContent = datosProducto.talles.join(', ');
+  document.getElementById('detalleColores').textContent = datosProducto.colores.join(', ');
+  document.getElementById('detalleMaterial').textContent = datosProducto.material;
+  document.getElementById('detallePrecio').textContent = datosProducto.precio;
+
+  // Botón de WhatsApp con mensaje automático
+  const mensaje = `Hola, estoy interesado/a en el producto: ${datosProducto.titulo}`;
+  document.getElementById('btnWhatsapp').onclick = () => {
+    window.open(`https://wa.me/59897431589?text=${encodeURIComponent(mensaje)}`, '_blank');
+  };
+
+  // Rellenar productos relacionados
+  const contenedorRelacionados = document.getElementById('detalleRelacionados');
+  contenedorRelacionados.innerHTML = '';
+  datosProducto.relacionados.forEach(producto => {
+    const card = document.createElement('div');
+    card.className = 'relacionado-item';
+    card.innerHTML = `
+      <img src="${producto.imagen}" alt="${producto.titulo}">
+      <p>${producto.titulo}</p>
+    `;
+    contenedorRelacionados.appendChild(card);
+  });
+
+  // Mostrar panel
+  const panel = document.getElementById(id);
+  panel.classList.remove('oculto');
+  setTimeout(() => {
+    panel.classList.add('abierto');
+  }, 10);
+}
+
+function cerrarDetalle(id) {
+  const panel = document.getElementById(id);
+  panel.classList.remove('abierto');
+  setTimeout(() => {
+    panel.classList.add('oculto');
+  }, 300);
+}
