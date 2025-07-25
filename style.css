@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -250,18 +251,25 @@ nav a {
   padding: 10px 16px;
   border-radius: 6px;
   cursor: pointer;
-  margin-top: 1rem;
+  margin-top: 20px;
 }
 
+
+.mt-4{
+margin-top: 60px;
+ 
+}
 .productos-relacionados {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+    margin-top:10px;
 }
 
 .relacionado-item {
   width: 100px;
   text-align: center;
+
 }
 
 .relacionado-item img {

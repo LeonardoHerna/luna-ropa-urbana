@@ -29,6 +29,7 @@ function mostrarDetalle(id, event, datosProducto) {
     card.innerHTML = `
       <img src="${producto.imagen}" alt="${producto.titulo}">
       <p>${producto.titulo}</p>
+      <p>${producto.precio}</p>
     `;
     contenedorRelacionados.appendChild(card);
   });

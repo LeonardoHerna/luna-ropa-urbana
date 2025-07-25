@@ -23,7 +23,7 @@
       <img class="hero-img-logo" src="Imagenes/Luna Ropa Urbana Minimalista.png"
       <h1>Estilo Urbano, Actitud Propia</h1>
       <p>Descubrí la nueva colección 2025</p>
-      <a href="#coleccion" class="boton">Ver Colección</a>
+      <a onclick="location.href='#productos-iniciales'" class="boton">Ver Colección</a>
     </div>
     <img src="Imagenes/principal.jpeg" alt="Imagen principal" class="hero-img" />
   </section>
@@ -46,8 +46,8 @@
     material: 'Lino 100%',
     precio: '$1.890',
     relacionados: [
-      { titulo: 'Sudadera Overzide', imagen: 'Imagenes/sudaderaOverzide2.jpeg' },
-      { titulo: 'Cargo Overzide', imagen: 'Imagenes/cargoOverzide.jpeg' }
+      { titulo: 'Sudadera Overzide', imagen: 'Imagenes/sudaderaOverzide2.jpeg',precio: '$1000' },
+      { titulo: 'Cargo Overzide', imagen: 'Imagenes/cargoOverzide.jpeg',precio: '$1200' }
     ]
   })">Ver más</button>
       </div>
@@ -64,11 +64,49 @@
     material: 'Lino 100%',
     precio: '$1.890',
     relacionados: [
-      { titulo: 'Pantalon Overzide', imagen: 'Imagenes/pantalonOverzide.jpeg' },
-      { titulo: 'Sudadera Overzide', imagen: 'Imagenes/sudaderaOverzide.jpeg' }
+      { titulo: 'Pantalon Overzide', imagen: 'Imagenes/pantalonOverzide.jpeg', precio: '$1300' },
+      { titulo: 'Sudadera Overzide', imagen: 'Imagenes/sudaderaOverzide.jpeg', precio: '$1500' }
     ]
   })">Ver más</button>
       </div>
+<div class="producto">
+        <img src="Imagenes/pantalonOverzide.jpeg" alt="Pantalon Oversize" />
+        <h3>Pantalon Oversize</h3>
+        <p class="precio">$1400</p>
+       <button class="btn-ver-mas" onclick="mostrarDetalle('detalleProducto', event, {
+    titulo: 'Pantalon Oversize',
+    imagen: 'Imagenes/pantalonOverzide.jpeg',
+    descripcion: 'Pantalon Oversize excelente calidad',
+    talles: ['S', 'M', 'L'],
+    colores: ['Blanco', 'Celeste'],
+    material: 'Lino 100%',
+    precio: '$1300',
+    relacionados: [
+      { titulo: 'Pantalon Overzide', imagen: 'Imagenes/pantalonOverzide.jpeg', precio: '$1300' },
+      { titulo: 'Sudadera Overzide', imagen: 'Imagenes/sudaderaOverzide.jpeg', precio: '$1500' }
+    ]
+  })">Ver más</button>
+      </div>
+
+      <div class="producto">
+        <img src="Imagenes/sudaderaOverzide.jpeg" alt="Sudadera Oversize" />
+        <h3>Sudadera Oversize</h3>
+        <p class="precio">$1200</p>
+       <button class="btn-ver-mas" onclick="mostrarDetalle('detalleProducto', event, {
+    titulo: 'Sudadera overzize',
+    imagen: 'Imagenes/sudaderaOverzide.jpeg',
+    descripcion: 'Sudadera comoda de excelente calidad.',
+    talles: ['S', 'M', 'L'],
+    colores: ['Blanco', 'Celeste'],
+    material: 'Lino 100%',
+    precio: '$1200',
+    relacionados: [
+      { titulo: 'Pantalon Overzide', imagen: 'Imagenes/pantalonOverzide.jpeg', precio: '$1300' },
+      { titulo: 'Sudadera Overzide', imagen: 'Imagenes/sudaderaOverzide.jpeg', precio: '$1200' }
+    ]
+  })">Ver más</button>
+      </div>
+
     </div>
   </div>
 </section>
