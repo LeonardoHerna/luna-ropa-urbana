@@ -36,7 +36,7 @@
       <div class="producto">
         <img  src="Imagenes/remeraOverzide.jpeg" alt="Remera Oversize" />
         <h3>Remera Oversize</h3>
-        <p class="precio">$ 25 Usd</p>
+        <p class="precio">$ 1000</p>
           <button class="btn-ver-mas" onclick="mostrarDetalle('detalleProducto', event, {
     titulo: 'Remera Overzide',
     imagen: 'Imagenes/remeraOverzide.jpeg',
@@ -46,15 +46,15 @@
     material: 'Lino 100%',
     precio: '$1.890',
     relacionados: [
-      { titulo: 'Sudadera Overzide', imagen: 'Imagenes/sudaderaOverzide2.jpeg',precio: '$1000' },
-      { titulo: 'Cargo Overzide', imagen: 'Imagenes/cargoOverzide.jpeg',precio: '$1200' }
+      { titulo: 'Sudadera Overzide', imagen: 'Imagenes/sudaderaOverzide2.jpeg',precio: '$1000', button: 'Ver mas' },
+      { titulo: 'Cargo Overzide', imagen: 'Imagenes/cargoOverzide.jpeg',precio: '$1200', button: 'Ver mas' }
     ]
   })">Ver más</button>
       </div>
       <div class="producto">
         <img src="Imagenes/buzoCrop.jpeg" alt="Buzo Crop" />
         <h3>Buzo Crop</h3>
-        <p class="precio">$ 35 Usd</p>
+        <p class="precio">$1400</p>
        <button class="btn-ver-mas" onclick="mostrarDetalle('detalleProducto', event, {
     titulo: 'Buzo Crop',
     imagen: 'Imagenes/buzoCrop.jpeg',
@@ -64,8 +64,8 @@
     material: 'Lino 100%',
     precio: '$1.890',
     relacionados: [
-      { titulo: 'Pantalon Overzide', imagen: 'Imagenes/pantalonOverzide.jpeg', precio: '$1300' },
-      { titulo: 'Sudadera Overzide', imagen: 'Imagenes/sudaderaOverzide.jpeg', precio: '$1500' }
+      { titulo: 'Pantalon Overzide', imagen: 'Imagenes/pantalonOverzide.jpeg', precio: '$1300', button: 'Ver mas' },
+      { titulo: 'Sudadera Overzide', imagen: 'Imagenes/sudaderaOverzide.jpeg', precio: '$1500', button: 'Ver mas' }
     ]
   })">Ver más</button>
       </div>
@@ -78,12 +78,12 @@
     imagen: 'Imagenes/pantalonOverzide.jpeg',
     descripcion: 'Pantalon Oversize excelente calidad',
     talles: ['S', 'M', 'L'],
-    colores: ['Blanco', 'Celeste'],
+    colores: ['Marron', 'Negro'],
     material: 'Lino 100%',
     precio: '$1300',
     relacionados: [
-      { titulo: 'Pantalon Overzide', imagen: 'Imagenes/pantalonOverzide.jpeg', precio: '$1300' },
-      { titulo: 'Sudadera Overzide', imagen: 'Imagenes/sudaderaOverzide.jpeg', precio: '$1500' }
+      { titulo: 'Pantalon Overzide', imagen: 'Imagenes/pantalonOverzide.jpeg', precio: '$1300', button: 'Ver mas' },
+      { titulo: 'Sudadera Overzide', imagen: 'Imagenes/sudaderaOverzide.jpeg', precio: '$1500', button: 'Ver mas' }
     ]
   })">Ver más</button>
       </div>
@@ -97,12 +97,12 @@
     imagen: 'Imagenes/sudaderaOverzide.jpeg',
     descripcion: 'Sudadera comoda de excelente calidad.',
     talles: ['S', 'M', 'L'],
-    colores: ['Blanco', 'Celeste'],
+    colores: ['Beige', 'Celeste'],
     material: 'Lino 100%',
     precio: '$1200',
     relacionados: [
-      { titulo: 'Pantalon Overzide', imagen: 'Imagenes/pantalonOverzide.jpeg', precio: '$1300' },
-      { titulo: 'Sudadera Overzide', imagen: 'Imagenes/sudaderaOverzide.jpeg', precio: '$1200' }
+      { titulo: 'Pantalon Overzide', imagen: 'Imagenes/pantalonOverzide.jpeg', precio: '$1300', button: 'Ver mas' },
+      { titulo: 'Sudadera Overzide', imagen: 'Imagenes/sudaderaOverzide.jpeg', precio: '$1200',  button: 'Ver mas' }
     ]
   })">Ver más</button>
       </div>
@@ -135,15 +135,17 @@
       </div>
     </div>
 
-    <h3 class="mt-4">Más de esta colección</h3>
-    <div id="detalleRelacionados" class="productos-relacionados">
-      <!-- Se insertan dinámicamente -->
-    </div>
+   <h3 class="mt-4">Más de esta colección</h3>
+<div class="carousel-wrapper">
+  <button class="carousel-btn izq" onclick="moverCarrusel(-1)">◀</button>
+  <div id="detalleRelacionados" class="productos-relacionados">
+    <!-- Productos se insertan aquí -->
   </div>
+  <button class="carousel-btn der" onclick="moverCarrusel(1)">▶</button>
 </div>
 
-
-
+  </div>
+</div>
 
   <!--Sobre nosotros-->
 <section class="about-us" id="nosotros">
@@ -163,6 +165,30 @@
     </ul>
 
     <p class="cta">Sumate a la comunidad Luna y viví tu estilo con actitud.</p>
+  </div>
+</section>
+
+<!--Section Testimonios-->
+
+<section id="testimonios" class="testimonios-seccion">
+  <h2>Lo que dicen nuestros clientes</h2>
+  <div class="testimonial-slider">
+    <div class="testimonial active">
+      <blockquote>"La camisa es de excelente calidad y me queda perfecta. ¡Super recomiendo!"</blockquote>
+      <footer>— <cite>María Pérez</cite></footer>
+    </div>
+    <div class="testimonial">
+      <blockquote>"Compré la remera y llegó rápido. El material es suave y muy cómodo."</blockquote>
+      <footer>— <cite>Carlos Gómez</cite></footer>
+    </div>
+    <div class="testimonial">
+      <blockquote>"Encantada con el producto: buen talle, tela fresca y envío rápido."</blockquote>
+      <footer>— <cite>Ana Fernández</cite></footer>
+    </div>
+  </div>
+  <div class="slider-buttons">
+    <button id="prevTest">Anterior</button>
+    <button id="nextTest">Siguiente</button>
   </div>
 </section>
 

@@ -31,7 +31,17 @@ function mostrarDetalle(id, event, datosProducto) {
       <p>${producto.titulo}</p>
       <p>${producto.precio}</p>
     `;
-    contenedorRelacionados.appendChild(card);
+
+    const btnVer = document.createElement('button');
+btnVer.classList.add('carousel-btn');
+btnVer.textContent = "Ver más";
+btnVer.onclick = function(event) {
+  mostrarDetalle('detalleProducto', event, producto);
+};
+
+card.appendChild(btnVer);
+contenedorRelacionados.appendChild(card);
+  
   });
 
   // Mostrar panel
@@ -49,3 +59,53 @@ function cerrarDetalle(id) {
     panel.classList.add('oculto');
   }, 300);
 }
+
+
+/*Mover carrusel*/
+
+function moverCarrusel(direccion) {
+  const contenedor = document.getElementById("detalleRelacionados");
+  const desplazamiento = 150 * direccion; // píxeles a mover
+
+  contenedor.scrollBy({
+    left: desplazamiento,
+    behavior: "smooth"
+  });
+}
+
+
+
+/*Carrusel de testimonios*/const slides = document.querySelectorAll('.testimonial');
+const slide = document.querySelectorAll('.testimonial');
+let indexActual = 0;
+let autoplayTimer = null;
+
+// Funciones de navegación manual (ya las tenías)
+document.getElementById('nextTest').addEventListener('click', () => {
+  slides[indexActual].classList.remove('active');
+  indexActual = (indexActual + 1) % slides.length;
+  slides[indexActual].classList.add('active');
+});
+document.getElementById('prevTest').addEventListener('click', () => {
+  slides[indexActual].classList.remove('active');
+  indexActual = (indexActual - 1 + slides.length) % slides.length;
+  slides[indexActual].classList.add('active');
+});
+
+// ✨ Agregamos autoplay con setInterval
+function iniciarAutoplay() {
+  autoplayTimer = setInterval(() => {
+    document.getElementById('nextTest').click();
+  }, 5000); // cambia cada 5 segundos
+}
+
+// ✋ Pausar autoplay al hacer hover sobre el slider
+const slider = document.querySelector('.testimonial-slider');
+slider.addEventListener('mouseenter', () => clearInterval(autoplayTimer));
+slider.addEventListener('mouseleave', iniciarAutoplay);
+
+// Iniciar autoplay automáticamente
+iniciarAutoplay();
+
+
+

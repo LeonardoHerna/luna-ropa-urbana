@@ -80,6 +80,10 @@ nav a {
   border-radius: 6px;
 }
 
+.boton:hover{
+  cursor: pointer;
+}
+
 /*Coleccion*/
 .coleccion {
     padding: 60px 20px;
@@ -112,10 +116,11 @@ nav a {
   }
 
   .producto img {
-    width: 100%;
-    height: auto;
+    width: 20%;
+    height: 60%;
     padding-top: 10%;
-  
+    object-fit: cover;
+    object-position: 50%;
   
   }
 
@@ -164,6 +169,7 @@ nav a {
 
 .btn-ver-mas:hover {
   background-color: #333;
+  cursor: pointer;
 }
 
 /*Panel detalle*/ 
@@ -200,6 +206,8 @@ nav a {
   font-size: 24px;
   float: right;
   cursor: pointer;
+  margin-left: 25px;
+
 }
 
 .whatsapp-btn {
@@ -225,6 +233,7 @@ nav a {
 
 .detalle-producto .imagen img {
   width: 100%;
+  height: 70%%;
   border-radius: 8px;
 }
 
@@ -255,29 +264,106 @@ nav a {
 }
 
 
+/*Productos relacionados en panell*/
+
 .mt-4{
 margin-top: 60px;
+margin-left: 50px;
  
 }
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
 .productos-relacionados {
   display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
   gap: 1rem;
-  flex-wrap: wrap;
-    margin-top:10px;
+  padding: 1rem 0;
+  flex: 1;
 }
 
 .relacionado-item {
-  width: 100px;
+  flex: 0 0 120px;
   text-align: center;
-
 }
 
 .relacionado-item img {
   width: 100%;
   border-radius: 6px;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
 }
 
+.carousel-btn {
+  background-color: #ddd;
+  border: none;
+  padding: 6px 10px;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
+.carousel-btn:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+/*Testimonios*/
+
+.testimonios-seccion {
+  padding: 2rem 1rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+.testimonios-seccion h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+.testimonial-slider {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+.testimonial {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.testimonial.active {
+  display: block;
+  opacity: 1;
+}
+.testimonial blockquote {
+  font-style: italic;
+  color: #333;
+}
+.testimonial footer {
+  margin-top: 0.8rem;
+  font-weight: bold;
+  color: #555;
+}
+.slider-buttons {
+  margin-top: 1rem;
+}
+.slider-buttons button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  margin: 0 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.slider-buttons button:hover {
+  background: #555;
+}
 
 
 /*Contacto*/
