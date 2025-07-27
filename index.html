@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Luna Ropa Urbana</title>
   <link rel="stylesheet" href="style.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+  
 </head>
 <body>
   <header>
@@ -162,26 +168,35 @@
   </div>
 </div>
 
-  <!--Sobre nosotros-->
+<!--Sobre nostros-->
 <section class="about-us" id="nosotros">
   <div class="container">
-    <h2 class="title">Sobre Nosotros</h2>
-    <p class="subtitle">No seguimos modas. Creamos estilo con identidad.</p>
-    <p class="description">
-      En <strong>Luna Ropa Urbana</strong> diseñamos ropa oversize y urbana pensada para que te vistas como sos. 
-      Cada prenda combina comodidad, actitud y estilo real. Nuestro propósito es que te sientas libre, auténtica y con confianza cada vez que te mirás al espejo.
-    </p>
+    <div class="about-content">
+      <div class="about-text">
+        <h2 class="title">Sobre Nosotros</h2>
+        <p class="subtitle">No seguimos modas. Creamos estilo con identidad.</p>
+        <p class="description">
+          En <strong>Luna Ropa Urbana</strong> diseñamos ropa oversize y urbana pensada para que te vistas como sos. 
+          Cada prenda combina comodidad, actitud y estilo real. Nuestro propósito es que te sientas libre, auténtica y con confianza cada vez que te mirás al espejo.
+        </p>
 
-    <ul class="values">
-      <li>✔ Comodidad con estilo</li>
-      <li>✔ Inspiración urbana</li>
-      <li>✔ Moda sin etiquetas</li>
-      <li>✔ Diseñado en Uruguay</li>
-    </ul>
+        <ul class="values">
+          <li><i class="fas fa-check-circle"></i> Comodidad con estilo</li>
+          <li><i class="fas fa-city"></i> Inspiración urbana</li>
+          <li><i class="fas fa-tag"></i> Moda sin etiquetas</li>
+          <li><i class="fas fa-flag-uruguay"></i> Diseñado en Uruguay</li>
+        </ul>
 
-    <p class="cta">Sumate a la comunidad Luna y viví tu estilo con actitud.</p>
+        <p class="cta">✨ Sumate a la comunidad Luna y viví tu estilo con actitud.</p>
+      </div>
+
+      <div class="about-img">
+        <img src="Imagenes/diseñador.jpeg" alt="Diseñadora de Luna trabajando" />
+      </div>
+    </div>
   </div>
 </section>
+
 
 <!--Section Testimonios-->
 
@@ -211,17 +226,25 @@
 <!--Section contacto-->
 <section id="contacto" class="contacto">
   <div class="container">
-    <h2>Contacto</h2>
-    <p>¿Querés hacer un pedido o tenés dudas?</p>
+    <h2 class="contacto-titulo">¿Querés hacer un pedido o tenés dudas?</h2>
+    <p class="contacto-subtitulo">Estamos para ayudarte por WhatsApp. ¡Respondemos rápido!</p>
 
     <!-- Botón de WhatsApp -->
-    <a href="https://wa.me/59897431589" target="_blank" class="whatsapp-btn">
-      <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp" />
+    <a href="https://wa.me/59897431589" target="_blank" class="contacto-whatsapp-btn" aria-label="Contactar por WhatsApp">
+      <i class="fab fa-whatsapp"></i>
       Escribinos por WhatsApp
     </a>
- 
+
+    <!-- Opcional: otros medios -->
+    <div class="contacto-redes">
+      <p>También podés escribirnos a <a href="mailto:info@lunaropa.com">info@lunaropa.com</a></p>
+      <a href="https://www.instagram.com/lunaropa.uy" target="_blank" class="redes-icono" aria-label="Instagram">
+        <i class="fab fa-instagram">Luna ropa urbana</i>
+      </a>
+    </div>
   </div>
 </section>
+
 
 
 <!--Footer-->
