@@ -9,8 +9,8 @@ function mostrarDetalle(id, event, datosProducto) {
   document.getElementById('detalleImagen').alt = datosProducto.titulo;
   document.getElementById('detalleDescripcion').textContent = datosProducto.descripcion;
 
-  document.getElementById('detalleTalles').textContent = datosProducto.talles.join(', ');
-  document.getElementById('detalleColores').textContent = datosProducto.colores.join(', ');
+  document.getElementById('detalleTalles').textContent = datosProducto.talles;
+  document.getElementById('detalleColores').textContent = datosProducto.colores;
   document.getElementById('detalleMaterial').textContent = datosProducto.material;
   document.getElementById('detallePrecio').textContent = datosProducto.precio;
 

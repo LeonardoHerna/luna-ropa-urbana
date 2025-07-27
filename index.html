@@ -18,15 +18,30 @@
     </nav>
   </header>
 
+  <!--Hero-->
   <section class="hero">
-    <div class="hero-texto">
-      <img class="hero-img-logo" src="Imagenes/Luna Ropa Urbana Minimalista.png"
-      <h1>Estilo Urbano, Actitud Propia</h1>
-      <p>Descubrí la nueva colección 2025</p>
-      <a onclick="location.href='#productos-iniciales'" class="boton">Ver Colección</a>
-    </div>
-    <img src="Imagenes/principal.jpeg" alt="Imagen principal" class="hero-img" />
-  </section>
+  <div class="hero-texto">
+    <img class="hero-img-logo" src="Imagenes/Luna Ropa Urbana Minimalista.png" alt="Logo de Luna Ropa Urbana" />
+    
+    <h1>Estilo Urbano, Actitud Propia</h1>
+    <p>Descubrí la nueva colección 2025</p>
+    
+    <a href="#productos-iniciales" class="boton" aria-label="Ver colección de productos">Ver Colección</a>
+  </div>
+
+  <!-- Imagen optimizada con srcset y lazy loading -->
+  <picture>
+    <source srcset="Imagenes/principal.jpeg" type="image/webp" />
+    <img 
+      src="Imagenes/principal.jpeg" 
+      alt="Modelo con ropa urbana estilo minimalista" 
+      class="hero-img" 
+      loading="lazy" 
+    />
+  </picture>
+</section>
+
+
 
  <!-- Colección -->
 <section id="productos-iniciales" class="coleccion">
@@ -46,8 +61,8 @@
     material: 'Lino 100%',
     precio: '$1.890',
     relacionados: [
-      { titulo: 'Sudadera Overzide', imagen: 'Imagenes/sudaderaOverzide2.jpeg',precio: '$1000', button: 'Ver mas' },
-      { titulo: 'Cargo Overzide', imagen: 'Imagenes/cargoOverzide.jpeg',precio: '$1200', button: 'Ver mas' }
+      { titulo: 'Sudadera Overzide', imagen: 'Imagenes/sudaderaOverzide2.jpeg',talles:['S','M','L'],colores:['Marron','Negro'],materiales:'100% lino',precio: '$1000', button: 'Ver mas' },
+      { titulo: 'Cargo Overzide', imagen: 'Imagenes/cargoOverzide.jpeg',talles:['S','M','L'],colores:['Marron','Negro'],materiales:'100% lino',precio: '$1200', button: 'Ver mas' }
     ]
   })">Ver más</button>
       </div>
@@ -64,8 +79,8 @@
     material: 'Lino 100%',
     precio: '$1.890',
     relacionados: [
-      { titulo: 'Pantalon Overzide', imagen: 'Imagenes/pantalonOverzide.jpeg', precio: '$1300', button: 'Ver mas' },
-      { titulo: 'Sudadera Overzide', imagen: 'Imagenes/sudaderaOverzide.jpeg', precio: '$1500', button: 'Ver mas' }
+      { titulo: 'Pantalon Overzide', imagen: 'Imagenes/pantalonOverzide.jpeg',talles:['S','M','L'],colores:['Marron','Negro'],materiales:'100% lino', precio: '$1300', button: 'Ver mas' },
+      { titulo: 'Sudadera Overzide', imagen: 'Imagenes/sudaderaOverzide.jpeg',talles:['S','M','L'],colores:['Marron','Negro'],materiales:'100% lino', precio: '$1500', button: 'Ver mas' }
     ]
   })">Ver más</button>
       </div>
@@ -82,8 +97,8 @@
     material: 'Lino 100%',
     precio: '$1300',
     relacionados: [
-      { titulo: 'Pantalon Overzide', imagen: 'Imagenes/pantalonOverzide.jpeg', precio: '$1300', button: 'Ver mas' },
-      { titulo: 'Sudadera Overzide', imagen: 'Imagenes/sudaderaOverzide.jpeg', precio: '$1500', button: 'Ver mas' }
+      { titulo: 'Pantalon Overzide', imagen: 'Imagenes/pantalonOverzide.jpeg',talles:['S','M','L'],colores:['Marron','Negro'],materiales:'100% lino', precio: '$1300', button: 'Ver mas' },
+      { titulo: 'Sudadera Overzide', imagen: 'Imagenes/sudaderaOverzide.jpeg',talles:['S','M','L'],colores:['Marron','Negro'],materiales:'100% lino', precio: '$1500', button: 'Ver mas' }
     ]
   })">Ver más</button>
       </div>
@@ -101,8 +116,8 @@
     material: 'Lino 100%',
     precio: '$1200',
     relacionados: [
-      { titulo: 'Pantalon Overzide', imagen: 'Imagenes/pantalonOverzide.jpeg', precio: '$1300', button: 'Ver mas' },
-      { titulo: 'Sudadera Overzide', imagen: 'Imagenes/sudaderaOverzide.jpeg', precio: '$1200',  button: 'Ver mas' }
+      { titulo: 'Pantalon Overzide', imagen: 'Imagenes/pantalonOverzide.jpeg',talles:['S','M','L'],colores:['Marron','Negro'],materiales:'100% lino', precio: '$1300', button: 'Ver mas' },
+      { titulo: 'Sudadera Overzide', imagen: 'Imagenes/sudaderaOverzide.jpeg',talles:['S','M','L'],colores:['Marron','Negro'],materiales:'100% lino', precio: '$1200',  button: 'Ver mas' }
     ]
   })">Ver más</button>
       </div>
