@@ -108,18 +108,5 @@ slider.addEventListener('mouseleave', iniciarAutoplay);
 iniciarAutoplay();
 
 
-//Enviar datos de formulario a whathsapp
-document.getElementById("form-contacto").addEventListener("submit", function(e) {
-  e.preventDefault();
-  const nombre = this.nombre.value;
-  const email = this.email.value;
-  const mensaje = this.mensaje.value;
-
-  const texto = encodeURIComponent(
-    `Hola, soy ${nombre} (${email}).\n\n${mensaje}`
-  );
-  window.open(`https://wa.me/59897431589?text=${texto}`, "_blank");
-  this.reset();
-});
 
 
